@@ -63,6 +63,7 @@ bool isNumberInBox(int sudoku[N][N], int number, int row, int column)
     }
     return false;
 }
+
 bool isNumberValid(int sudoku[N][N], int number, int row, int column)
 {
     return (!isNumberInColumn(sudoku, number, column) && !isNumberInRow(sudoku, number, row) && !isNumberInBox(sudoku, number, row, column));
