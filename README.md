@@ -1,8 +1,8 @@
 # College-Project
 
-tihs is our project about sudoku solver
+This is our project about sudoku solver
 
 contributer:-
-path patel 23aiml055
-deval shah  23aiml065
-siddhraj thakor 23aiml070
+Path Patel 23AIML055
+Deval Shah  23AIML065
+Siddhraj Thakor 23AIML070
