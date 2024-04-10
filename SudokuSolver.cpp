@@ -63,3 +63,38 @@ bool isNumberInBox(int sudoku[N][N], int number, int row, int column)
     }
     return false;
 }
+bool isNumberValid(int sudoku[N][N], int number, int row, int column)
+{
+    return (!isNumberInColumn(sudoku, number, column) && !isNumberInRow(sudoku, number, row) && !isNumberInBox(sudoku, number, row, column));
+}
+
+bool solveSudoku(int sudoku[N][N])
+{
+    for (int row = 0; row < N; row++)
+    {
+        for (int column = 0; column < N; column++)
+        {
+            if (sudoku[row][column] == 0)
+            {
+                for (int numberToTry = 1; numberToTry <= N; numberToTry++)
+                {
+                    if (isNumberValid(sudoku, numberToTry, row, column))
+                    {
+                        sudoku[row][column] = numberToTry;
+
+                        if (solveSudoku(sudoku))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            sudoku[row][column] = 0;
+                        }
+                    }
+                }
+                return false;
+            }
+        }
+    }
+    return true;
+}
