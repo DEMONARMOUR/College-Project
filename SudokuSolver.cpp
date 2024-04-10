@@ -2,7 +2,7 @@
 using namespace std;
 #define N 9
 
-void printSudoku(int sudoku[N][N])
+void printSudoku(int sudoku[N][N]) 
 {
     for (int row = 0; row < N; row++)
     {
