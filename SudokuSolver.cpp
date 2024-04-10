@@ -99,3 +99,30 @@ bool solveSudoku(int sudoku[N][N])
     }
     return true;
 }
+
+int main()
+{
+    int sudoku[N][N] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0}
+        };
+    printSudoku(sudoku);
+
+    if (solveSudoku(sudoku))
+    {
+        cout << "\n\nSolved Sudoku:\n\n\n";
+        printSudoku(sudoku);
+    }
+    else
+    {
+        cout << "Sudoku can't be solved";
+    }
+    return 0;
+}
